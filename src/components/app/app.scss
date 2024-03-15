@@ -1,0 +1,228 @@
+/* stylelint-disable media-feature-range-notation */
+/* stylelint-disable font-family-name-quotes */
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    background: rgba(19 52 87 / 87%);
+
+    &__background {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: url('../../img/background.jpeg') 0 / cover fixed;
+        width: 100dvw;
+        height: 100dvh;
+        filter: blur(26px);
+    }
+
+    &__container {
+        margin: 0 auto;
+        width: 80%;
+        height: 100dvh;
+        color: #fff;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        padding-top: 65px;
+
+        &-item.transparent {
+            border: 1px solid #fff;
+            background-color: transparent;
+            color: #fff;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #fff;
+            background-color: #fff;
+            cursor: pointer;
+            width: 380px;
+            height: 70px;
+            color: rgb(7 48 93);
+            font-family: 'Raleway', sans-serif;
+
+            &__name {
+                width: calc(100% - 70px);
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            &__arrow.transparent {
+                border-left: 2px solid #fff;
+            }
+
+            &__arrow {
+                position: relative;
+                border-left: 2px solid rgb(11 52 97);
+                width: 70px;
+                height: 100%;
+
+                img {
+                    position: absolute;
+                    right: 13px;
+                    bottom: 13px;
+                }
+            }
+        }
+    }
+
+    &__promo {
+        display: flex;
+        position: relative;
+        gap: 80px;
+        align-items: center;
+        height: calc(100% - 120px);
+        font-family: 'Raleway', sans-serif;
+
+        &-counters {
+            display: flex;
+            gap: 230px;
+            padding-top: 120px;
+
+            &__item {
+                border-left: 1px solid rgba(255 255 255 / 60%);
+                padding-left: 24px;
+                width: 200px;
+                line-height: 123%;
+
+                &-count {
+                    padding-bottom: 30px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 40px;
+                    font-weight: 600;
+                }
+
+                &-description {
+                    opacity: 0.5;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-info {
+            width: 800px;
+        }
+
+        &-image {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-title {
+            padding-bottom: 55px;
+            text-transform: uppercase;
+            line-height: 135%;
+            font-size: 65px;
+            font-weight: 600;
+        }
+
+        &-description {
+            opacity: 0.5;
+            border-left: 1px solid #fff;
+            padding-left: 25px;
+            line-height: 150%;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 1325px) and (max-width: 1630px) {
+    .app {
+        &__buttons {
+            display: block;
+
+            &-item {
+                margin-top: 15px;
+            }
+        }
+
+        &__promo {
+            &-title {
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+@media (min-width: 0) and (max-width: 1325px) {
+    .app {
+        &__buttons {
+            display: block;
+
+            &-item {
+                margin-top: 15px;
+            }
+        }
+
+        &__promo {
+            justify-content: center;
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &-description {
+                border: 0;
+                text-align: center;
+            }
+
+            &-title {
+                font-size: 30px;
+            }
+
+            &-image {
+                display: none;
+
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0) and (max-width: 1199px) {
+    .app {
+        &__buttons {
+            display: block;
+
+            &-item {
+                margin-top: 15px;
+            }
+        }
+
+        &__promo {
+            &-title {
+                font-size: 1.5rem;
+            }
+
+            &-image {
+                right: -130px;
+            }
+        }
+    }
+}
